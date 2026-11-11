@@ -60,4 +60,4 @@ Links: `<a href="https://...">source name</a>`. Escape `&`, `<` and `>` in text.
 </article>
 ```
 
-Tags: Macro, Fed, Earnings, Guidance, M&A, Analyst, Rumor, Geopolitics, Commodities, Crypto, Other.
+Tags: Macro, Fed, Trump, Earnings, Guidance, M&A, Analyst, Rumor, Geopolitics, Commodities, Crypto, Other.
