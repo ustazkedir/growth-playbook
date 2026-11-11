@@ -3,18 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Growth Playbook</title>
 <style>
-  body { margin: 0; background: #fafafa; color: #222; font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-weight: 300; }
-  main { max-width: 640px; margin: 18vh auto 0; padding: 0 16px; }
-  h1 { font-weight: 300; font-size: 2rem; margin: 0 0 8px; }
-  p { color: #666; margin: 0; }
+  :root { --bg:#fbfbfa; --card:#ffffff; --ink:#1f2328; --muted:#6b7280; --line:#e6e6e3; --accent:#0f766e; --warn:#b45309; --stop:#b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:300; font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:860px; margin:0 auto; padding:32px 16px 64px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:24px; }
+  h1 { font-weight:300; font-size:1.9rem; letter-spacing:-0.01em; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:0.9rem; margin:0; }
+  article.report { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:20px 22px; margin:0 0 16px; }
+  article.report:first-of-type { border-color:var(--accent); }
+  article.report h2 { font-weight:400; font-size:1.1rem; margin:0 0 2px; }
+  article.report .time { color:var(--muted); font-size:0.85rem; margin:0 0 12px; }
+  article.report .lead { font-weight:400; margin:0 0 12px; }
+  article.report h3 { font-weight:400; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin:18px 0 6px; }
+  article.report ul { margin:0; padding-left:18px; }
+  article.report li { margin:2px 0; }
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:0.88rem; }
+  th { text-align:left; font-weight:400; color:var(--muted); border-bottom:1px solid var(--line); padding:6px 10px 6px 0; white-space:nowrap; }
+  td { border-bottom:1px solid var(--line); padding:6px 10px 6px 0; vertical-align:top; }
+  .ok { color:var(--accent); } .warn { color:var(--warn); } .stop { color:var(--stop); font-weight:400; }
+  a { color:var(--accent); }
+  #empty { color:var(--muted); }
 </style>
 </head>
 <body>
 <main>
-  <h1>Growth Playbook</h1>
-  <p>Placeholder page. Connection test on 11 November 2026.</p>
+  <header>
+    <h1>Growth Playbook</h1>
+    <!-- UPDATED:START --><p class="sub">No reports yet.</p><!-- UPDATED:END -->
+  </header>
+
+  <!-- REPORTS:START -->
+  <p id="empty">Reports appear here when the hourly market watch finds something significant.</p>
+  <!-- REPORTS:END -->
 </main>
 </body>
 </html>
