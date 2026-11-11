@@ -9,37 +9,62 @@
   :root { --bg:#fbfbfa; --card:#ffffff; --ink:#1f2328; --muted:#6b7280; --line:#e6e6e3; --accent:#0f766e; --warn:#b45309; --stop:#b91c1c; }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:300; font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; }
-  main { max-width:860px; margin:0 auto; padding:32px 16px 64px; }
-  header { border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:24px; }
-  h1 { font-weight:300; font-size:1.9rem; letter-spacing:-0.01em; margin:0 0 4px; }
-  .sub { color:var(--muted); font-size:0.9rem; margin:0; }
+  main { max-width:860px; margin:0 auto; padding:28px 16px 64px; }
+  h1 { font-weight:300; font-size:1.9rem; letter-spacing:-0.01em; margin:0 0 14px; }
+  nav { display:flex; gap:4px; border-bottom:1px solid var(--line); margin-bottom:20px; overflow-x:auto; }
+  nav button { font:inherit; font-weight:400; color:var(--muted); background:none; border:0; border-bottom:2px solid transparent; padding:8px 14px; margin-bottom:-1px; cursor:pointer; white-space:nowrap; }
+  nav button:hover { color:var(--ink); }
+  nav button[aria-selected="true"] { color:var(--accent); border-bottom-color:var(--accent); }
+  .sub { color:var(--muted); font-size:0.9rem; margin:0 0 16px; }
   article.report { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:20px 22px; margin:0 0 16px; }
   article.report:first-of-type { border-color:var(--accent); }
   article.report h2 { font-weight:400; font-size:1.1rem; margin:0 0 2px; }
   article.report .time { color:var(--muted); font-size:0.85rem; margin:0 0 12px; }
   article.report .lead { font-weight:400; margin:0 0 12px; }
   article.report h3 { font-weight:400; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin:18px 0 6px; }
-  article.report ul { margin:0; padding-left:18px; }
+  article.report h4 { font-weight:400; font-size:0.98rem; margin:16px 0 4px; }
+  article.report p { margin:0 0 8px; }
+  article.report ul, article.report ol { margin:0 0 8px; padding-left:18px; }
   article.report li { margin:2px 0; }
   .tablewrap { overflow-x:auto; }
   table { border-collapse:collapse; width:100%; font-size:0.88rem; }
   th { text-align:left; font-weight:400; color:var(--muted); border-bottom:1px solid var(--line); padding:6px 10px 6px 0; white-space:nowrap; }
   td { border-bottom:1px solid var(--line); padding:6px 10px 6px 0; vertical-align:top; }
   .ok { color:var(--accent); } .warn { color:var(--warn); } .stop { color:var(--stop); font-weight:400; }
-  a { color:var(--accent); }
-  #empty { color:var(--muted); }
+  a { color:var(--accent); word-break:break-word; }
+  .empty { color:var(--muted); }
 </style>
 </head>
 <body>
 <main>
-  <header>
-    <h1>Growth Playbook</h1>
-    <!-- UPDATED:START --><p class="sub">No reports yet.</p><!-- UPDATED:END -->
-  </header>
-
-  <!-- REPORTS:START -->
-  <p id="empty">Reports appear here when the hourly market watch finds something significant.</p>
-  <!-- REPORTS:END -->
+  <h1>Growth Playbook</h1>
+  <nav role="tablist">
+    <button role="tab" data-tab="growth" aria-selected="true">Growth playbook</button>
+    <button role="tab" data-tab="premarket" aria-selected="false">Pre-market screen</button>
+    <button role="tab" data-tab="ai-news" aria-selected="false">AI news</button>
+  </nav>
+  <section id="panel" role="tabpanel"><p class="empty">Loading.</p></section>
 </main>
+<script>
+  var tabs = ["growth", "premarket", "ai-news"];
+  var panel = document.getElementById("panel");
+  function show(name) {
+    if (tabs.indexOf(name) === -1) name = "growth";
+    document.querySelectorAll("nav button").forEach(function (b) {
+      b.setAttribute("aria-selected", b.dataset.tab === name ? "true" : "false");
+    });
+    fetch("tabs/" + name + ".html?t=" + Date.now())
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function (html) {
+        panel.innerHTML = html.indexOf("<article") === -1 ? '<p class="empty">No reports yet.</p>' : html;
+      })
+      .catch(function () { panel.innerHTML = '<p class="empty">Could not load this tab. Refresh to retry.</p>'; });
+  }
+  document.querySelectorAll("nav button").forEach(function (b) {
+    b.addEventListener("click", function () { location.hash = b.dataset.tab; });
+  });
+  window.addEventListener("hashchange", function () { show(location.hash.slice(1)); });
+  show(location.hash.slice(1));
+</script>
 </body>
 </html>
