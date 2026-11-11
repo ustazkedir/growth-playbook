@@ -32,6 +32,13 @@
   td { border-bottom:1px solid var(--line); padding:6px 10px 6px 0; vertical-align:top; }
   .ok { color:var(--accent); } .warn { color:var(--warn); } .stop { color:var(--stop); font-weight:400; }
   a { color:var(--accent); word-break:break-word; }
+  article.hl { display:grid; grid-template-columns:150px 1fr; gap:4px 16px; padding:10px 0; border-bottom:1px solid var(--line); }
+  article.hl p { margin:0; }
+  article.hl .hl-time { color:var(--muted); font-size:0.82rem; line-height:1.4; padding-top:2px; }
+  article.hl.major .hl-text { font-weight:400; }
+  article.hl.major { border-left:2px solid var(--accent); padding-left:10px; }
+  .tag { display:inline-block; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 6px; margin-right:6px; background:var(--card); }
+  @media (max-width:560px) { article.hl { grid-template-columns:1fr; } }
   .empty { color:var(--muted); }
 </style>
 </head>
@@ -40,13 +47,14 @@
   <h1>Growth Playbook</h1>
   <nav role="tablist">
     <button role="tab" data-tab="growth" aria-selected="true">Growth playbook</button>
+    <button role="tab" data-tab="headlines" aria-selected="false">Market headlines</button>
     <button role="tab" data-tab="premarket" aria-selected="false">Pre-market screen</button>
     <button role="tab" data-tab="ai-news" aria-selected="false">AI news</button>
   </nav>
   <section id="panel" role="tabpanel"><p class="empty">Loading.</p></section>
 </main>
 <script>
-  var tabs = ["growth", "premarket", "ai-news"];
+  var tabs = ["growth", "headlines", "premarket", "ai-news"];
   var panel = document.getElementById("panel");
   function show(name) {
     if (tabs.indexOf(name) === -1) name = "growth";

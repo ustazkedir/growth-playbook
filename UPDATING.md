@@ -2,11 +2,12 @@
 
 Public page: https://ustazkedir.github.io/growth-playbook/
 
-`index.html` is the shell with three tabs. Never edit it. Each scheduled task owns ONE file:
+`index.html` is the shell with four tabs. Never edit it. Each scheduled task owns ONE file:
 
 | Task | File | Tab link |
 |---|---|---|
 | Growth playbook | `tabs/growth.html` | `#growth` (default) |
+| Market headlines | `tabs/headlines.html` | `#headlines` |
 | Pre-market catalyst screen | `tabs/premarket.html` | `#premarket` |
 | Daily AI news brief | `tabs/ai-news.html` | `#ai-news` |
 
@@ -43,3 +44,20 @@ Report block shape:
 
 Use `<span class="ok">`, `<span class="warn">` and `<span class="stop">` for confirmed, caution and stop items.
 Links: `<a href="https://...">source name</a>`. Escape `&`, `<` and `>` in text. Plain HTML only.
+
+## Market headlines tab (different shape)
+
+`tabs/headlines.html` holds one entry per headline instead of report cards:
+
+- Line 1: `<p class="sub">Last checked: <Day Mon D> · <HH:MM> ET / <HH:MM> EAT · <N> new</p>`
+- Below it: `<article class="hl">` entries, newest first. Add `major` to the class for market-moving items.
+- Delete entries older than 3 days, and keep at most 150 entries.
+
+```html
+<article class="hl major">
+  <p class="hl-time">Wed Nov 11 · 09:14 ET / 17:14 EAT</p>
+  <p class="hl-text"><span class="tag">Earnings</span><strong>TICKER</strong> One-sentence headline. <span class="ok">✓</span> <a href="https://...">Reuters</a></p>
+</article>
+```
+
+Tags: Macro, Fed, Earnings, Guidance, M&A, Analyst, Rumor, Geopolitics, Commodities, Crypto, Other.
