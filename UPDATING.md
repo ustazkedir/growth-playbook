@@ -11,20 +11,16 @@ Public page: https://ustazkedir.github.io/growth-playbook/
 | Pre-market catalyst screen | `tabs/premarket.html` | `#premarket` |
 | Daily AI news brief | `tabs/ai-news.html` | `#ai-news` |
 
-A tab file is an HTML fragment (no `<html>`, `<head>`, `<body>`, `<style>` or `<script>`):
+NO HISTORY: each run REPLACES the previous content of its tab file. Overwrite the whole file.
 
-- Line 1 is always one status line: `<p class="sub">Last report: <Day Mon D> · <HH:MM> ET / <HH:MM> EAT</p>`
-- Below it: `<article class="report">` blocks, newest first.
+A tab file is an HTML fragment (no `<html>`, `<head>`, `<body>`, `<style>` or `<script>`).
 
-To publish a report:
+## Report tabs (growth, premarket, ai-news)
 
-1. Replace line 1 with the new status line.
-2. Insert one new `<article class="report">` block directly below line 1.
-3. Keep at most 60 `<article class="report">` blocks. Delete the oldest beyond that.
-4. Touch only your own tab file.
-5. Commit, then `git pull --rebase origin main`, then `git push origin HEAD:main`. If the push is rejected, pull --rebase and push once more.
+The file holds exactly two parts:
 
-Report block shape:
+- Line 1, one status line: `<p class="sub">Last report: <Day Mon D> · <HH:MM> ET / <HH:MM> EAT</p>`
+- Then exactly ONE `<article class="report">` block: the current report. Never keep earlier reports.
 
 ```html
 <article class="report">
@@ -42,16 +38,13 @@ Report block shape:
 </article>
 ```
 
-Use `<span class="ok">`, `<span class="warn">` and `<span class="stop">` for confirmed, caution and stop items.
-Links: `<a href="https://...">source name</a>`. Escape `&`, `<` and `>` in text. Plain HTML only.
+## Market headlines tab
 
-## Market headlines tab (different shape)
-
-`tabs/headlines.html` holds one entry per headline instead of report cards:
+`tabs/headlines.html` holds only the entries found by the current run:
 
 - Line 1: `<p class="sub">Last checked: <Day Mon D> · <HH:MM> ET / <HH:MM> EAT · <N> new</p>`
-- Below it: `<article class="hl">` entries, newest first. Add `major` to the class for market-moving items.
-- Delete entries older than 3 days, and keep at most 150 entries.
+- Then this run's `<article class="hl">` entries, newest first. Add `major` to the class for market-moving items.
+- Delete every entry from earlier runs. Exception: if this run found 0 new entries, change only line 1 and leave the entries as they are.
 
 ```html
 <article class="hl major">
@@ -61,3 +54,10 @@ Links: `<a href="https://...">source name</a>`. Escape `&`, `<` and `>` in text.
 ```
 
 Tags: Macro, Fed, Trump, Earnings, Guidance, M&A, Analyst, Rumor, Geopolitics, Commodities, Crypto, Other.
+
+## All tabs
+
+- Use `<span class="ok">`, `<span class="warn">` and `<span class="stop">` for confirmed, caution and stop items.
+- Links: `<a href="https://...">source name</a>`. Escape `&`, `<` and `>` in text. Plain HTML only. No em-dashes.
+- Touch only your own tab file.
+- Commit, then `git pull --rebase origin main`, then `git push origin HEAD:main`. If the push is rejected, pull --rebase and push once more. Never force push.
