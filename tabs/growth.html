@@ -1,72 +1,98 @@
-<p class="sub">Last report: Fri Nov 13 · 03:01 ET / 11:01 EAT</p>
+<p class="sub">Last report: Fri Nov 13 · 09:42 ET / 17:42 EAT</p>
 <article class="report">
-  <h2>Overnight: SMH gives back the AMAT/Cisco pop, 498.80, still above 494</h2>
-  <p class="time">Fri Nov 13 · 03:01 ET / 11:01 EAT</p>
-  <p class="lead"><span class="warn">⚠</span> SMH trades 498.80 overnight, -2.0% from the 509.10 after-hours print at the last run and -0.58% vs Thursday's 501.73 close. It is still 1.0% above the 494 T1b level. Overnight print: bias, not signal. No fills, no order changes, no new verified catalyst; PPI at 08:30 ET / 16:30 EAT is the next test.</p>
-  <h3>What changed since the last report (21:01 ET / 05:01 EAT)</h3>
+  <h2>Degraded run: IBKR offline; PPI cooler than forecast, no action on the plan</h2>
+  <p class="time">Fri Nov 13 · 09:42 ET / 17:42 EAT (pre-market run, started late)</p>
+  <p class="lead"><span class="warn">⚠</span> DEGRADED MODE: the IBKR connector failed to connect (retried once), so no live prices, fills or order statuses this run. Holdings per the plan: SMH 3 of 5, PHYS 12 of 48, PSLV 14 of 43, SPTE 0 of 56. No new buy is due before the close; hold the plan, do not chase the PPI pop.</p>
+
+  <h3>What changed since the last report (03:01 ET / 11:01 EAT)</h3>
   <ul>
-    <li>SMH 498.80 at 03:01 ET / 11:01 EAT (-0.58% vs close; -2.0% vs the 509.10 after-hours print). Overnight volume 31.2K. Bias only <span class="warn">⚠</span> IBKR</li>
-    <li>SPY 756.86 (-0.03%), QQQ 686.38 (-0.26%): index futures-proxy flat to slightly lower; the semis after-hours rally faded, broad market did not break <span class="ok">✓</span> IBKR</li>
-    <li>PSLV 16.17 (+0.12%). SPTE 44.27 and PHYS 29.29: no overnight trade, last close shown <span class="ok">✓</span> IBKR</li>
-    <li>News: no new market-moving catalyst verified since the last run. Evening coverage repeats the Nvidia story (Huang resigned, CFO Colette Kress interim CEO) and the AMAT, Cisco and Cerebras beats; US futures were modestly higher at 21:37 ET (Nasdaq-100 +0.52%) before the fade <span class="ok">✓</span> <a href="https://finance.yahoo.com/markets/stocks/articles/dow-p-500-nasdaq-futures-030745752.html">Yahoo Finance / Stocktwits</a></li>
-    <li>Orders and fills: no fills. Positions unchanged: SMH 3, PHYS 12, PSLV 14. Same order statuses as last run (SMH stop 482.99 / limit 520.95, PHYS stop 28.90, PSLV stop 15.50, SPTE buy limits 42.9 / 42.3 show REPLACED; SPTE stops 40.90 show NEW). Still worth confirming in TWS that they are working <span class="warn">⚠</span> IBKR</li>
+    <li><span class="ok">✓</span> October PPI (08:30 ET / 16:30 EAT): headline +0.3% m/m vs +0.4% expected; 6.5% y/y vs 6.6% expected. Core +0.3% m/m in line; core 5.0% y/y. Cooler than forecast, still hot in level terms. <a href="https://www.stocktitan.net/articles/october-2026-ppi-report">StockTitan</a></li>
+    <li><span class="ok">✓</span> Futures turned up after PPI: Dow +0.16%, S&amp;P 500 +0.28%, Nasdaq 100 +0.19% pre-open. Nvidia about +2.7% pre-market after Thursday's 4%+ drop on the Huang resignation (CFO Colette Kress interim CEO; earnings still Tue Nov 17). <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262304609-nvda-nvidia-msft-us-ppi-tradingkey">TradingKey</a>, <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-13-2026">TheStreet</a></li>
+    <li><span class="warn">⚠</span> Semis mixed pre-market: AMD about -1.8% and AVGO about -2.4% after +5.9% / +5.5% Thursday; TSM +0.9%. SMH price not available this run.</li>
+    <li><span class="warn">⚠</span> Rates: 10-year reported above 5.1%, highest since October; markets price about 87% odds of a December 25bp hike (source report, not verified). Headwind for growth sleeves.</li>
+    <li>Gold futures +0.2% (about 3,894), silver futures -0.4% (about 49.89) at about 07:55 ET. PHYS and PSLV sit near their stops; no live check possible.</li>
+    <li>Microsoft Exchange Online outage (not a cyberattack); MSFT -1.4% to -2.3% pre-market. Cerebras +16-19% pre-market on Q3 results.</li>
   </ul>
-  <h3>Levels vs playbook</h3>
+
+  <h3>Planned orders</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Ticker</th><th>Full size</th><th>Held now (of full)</th><th>Next order (shares, type, condition)</th><th>When to submit (ET / EAT)</th><th>Order in IBKR?</th><th>Status</th><th>Flag</th></tr></thead>
+    <tbody>
+      <tr><td>SMH</td><td>5</td><td>3 of 5</td><td>Bought 1 @ 499.00, Wed Nov 11; bought 2 LOC @ 506.96, Wed Nov 11 close</td><td>done</td><td>n/a</td><td>filled</td><td><span class="ok">✓</span> at half-size cap below the 200-day</td></tr>
+      <tr><td>SMH</td><td>5</td><td>3 of 5</td><td>Buy 2 SMH LOC on a daily close above 521 (would make 5 of 5)</td><td>after Nvidia only: from Wed Nov 18, by 15:45 ET / 23:45 EAT</td><td>no</td><td>blocked (after Nvidia only)</td><td><span class="warn">⚠</span></td></tr>
+      <tr><td>SMH</td><td>-</td><td>3</td><td>Sell stop 482.99, 3 sh, GTC</td><td>live</td><td>check (IBKR offline)</td><td>resting</td><td><span class="ok">✓</span></td></tr>
+      <tr><td>SMH</td><td>-</td><td>3</td><td>Sell limit 520.95, 3 sh, GTC</td><td>live</td><td>check (IBKR offline)</td><td>resting</td><td><span class="warn">⚠</span> would sell all 3 just below the 521 add level; confirm it is intended</td></tr>
+      <tr><td>SPTE</td><td>56</td><td>0 of 56</td><td>Buy 14 @ 42.90 limit GTC + 14 @ 42.30 limit GTC (would make 28 of 56)</td><td>resting</td><td>check (last seen REPLACED)</td><td>resting</td><td><span class="warn">⚠</span> confirm working in TWS</td></tr>
+      <tr><td>SPTE</td><td>56</td><td>0 of 56</td><td>Buy 28 SPTE LOC on a daily close above 44.2 while SMH is above 494</td><td>by 15:45 ET / 23:45 EAT on the day</td><td>no</td><td>waiting for condition</td><td><span class="warn">⚠</span> plan conflict: 28 limits + 28 add = 56 full size, but trend filter allows 28 below the 200-day (200-day not checked this run)</td></tr>
+      <tr><td>SPTE</td><td>-</td><td>0</td><td>Sell stops 40.90, 14 sh x2</td><td>live</td><td>check (last seen NEW)</td><td>resting</td><td><span class="warn">⚠</span> no SPTE held; could open a short if not attached to the buy limits</td></tr>
+      <tr><td>PHYS</td><td>48</td><td>12 of 48</td><td>Bought 12 @ 29.695, Thu Nov 12. Next: buy 12 PHYS LOC if the close is above 31.8 (24 of 48); then 24 LOC above 33.9 (48 of 48)</td><td>by 15:45 ET / 23:45 EAT on the day</td><td>no</td><td>waiting for condition</td><td><span class="ok">✓</span></td></tr>
+      <tr><td>PHYS</td><td>-</td><td>12</td><td>Sell stop 28.90, 12 sh</td><td>live</td><td>check (IBKR offline)</td><td>resting</td><td><span class="warn">⚠</span> was 1.3% away</td></tr>
+      <tr><td>PSLV</td><td>43</td><td>14 of 43</td><td>Bought 14 @ 16.20, Thu Nov 12. Next: buy 14 PSLV LOC if the close is above 18.8 (28 of 43); then 15 on a 200-day reclaim (43 of 43)</td><td>by 15:45 ET / 23:45 EAT on the day</td><td>no</td><td>waiting for condition</td><td><span class="ok">✓</span></td></tr>
+      <tr><td>PSLV</td><td>-</td><td>14</td><td>Sell stop 15.50, 14 sh</td><td>live</td><td>check (IBKR offline)</td><td>resting</td><td><span class="ok">✓</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Levels vs plan</h3>
   <p>Forming = true right now during the session; it counts only if it holds at the 16:00 ET / 00:00 EAT close. The 05:01 EAT run marks it confirmed or not. Close position = (close - low) / (high - low): 0 is the day's low, 1 is the day's high.</p>
   <div class="tablewrap"><table>
     <thead><tr><th>Ticker</th><th>Last</th><th>Level</th><th>What it means</th><th>State</th><th>Flag</th></tr></thead>
     <tbody>
-      <tr><td>SMH</td><td>498.80 (overnight)</td><td>494 (T1b LOC)</td><td>Next SMH buy tranche; triggers on a daily close above 494; LOC fills in the closing auction.</td><td>1.0% above; overnight bias only, not forming until the session</td><td><span class="warn">⚠</span> thin cushion</td></tr>
-      <tr><td>SMH</td><td>498.80</td><td>Washout (2x avg20, close position 0.5+)</td><td>Selling climax; heavy volume with a strong close; often marks a low.</td><td>Not forming (no session yet)</td><td><span class="ok">✓</span></td></tr>
-      <tr><td>SMH</td><td>498.80</td><td>Distribution bar (2x, close below 0.5)</td><td>Heavy volume with a weak close; big holders selling.</td><td>Not forming (no session yet)</td><td><span class="ok">✓</span></td></tr>
-      <tr><td>SMH</td><td>498.80</td><td>Follow-through day (+1.5% on higher volume)</td><td>Strong up day on rising volume, Nov 11-16; confirms a bottom.</td><td>Needs a close of about 509.26+ on volume above 7.18M; not forming. Window left: today, Mon Nov 16</td><td><span class="warn">⚠</span></td></tr>
-      <tr><td>SMH</td><td>498.80</td><td>Your stop 482.99 / playbook STOP close below 474</td><td>Your stop order fills intraday on any trade; the playbook stop needs a close.</td><td>3.2% / 5.2% away</td><td><span class="ok">✓</span></td></tr>
-      <tr><td>SMH</td><td>498.80</td><td>521 (200d, T2); bull zone 521-537</td><td>200-day average; a close above is the T2 buy, only after Nvidia.</td><td>4.5% below; not eligible before Nov 17</td><td><span class="warn">⚠</span></td></tr>
-      <tr><td>SPTE</td><td>44.27 (last close)</td><td>Close above 44.2 (T2); limits 42.9 / 42.3; STOP 40.9</td><td>Limits are resting buys; close above 44.2 is the T2 buy; close below 40.9 exits.</td><td>0.16% above 44.2; no overnight trade</td><td><span class="warn">⚠</span> marginal</td></tr>
-      <tr><td>PHYS</td><td>29.29 (last close)</td><td>Limit 29.7; add above 31.8; full above 33.9; STOP close below 28.9</td><td>Close-based adds and exit; your GTC stop at 28.90 can fill intraday.</td><td>1.3% above the stop; no add</td><td><span class="warn">⚠</span></td></tr>
-      <tr><td>PSLV</td><td>16.17</td><td>Limit 16.2; add above 18.8; STOP close below 15.5</td><td>Close-based add and exit; your GTC stop at 15.50 can fill intraday.</td><td>4.3% above the stop; no add</td><td><span class="ok">✓</span></td></tr>
+      <tr><td>SMH</td><td>498.80 (03:01 ET, stale)</td><td>Stop 482.99 / STOP close below 474</td><td>GTC stop fills intraday at or below it; plan STOP needs a daily close.</td><td>was 3.2% / 5.2% away; no live data</td><td><span class="warn">⚠</span></td></tr>
+      <tr><td>SMH</td><td>stale</td><td>Washout / distribution bar</td><td>2x avg20 volume; close upper half = selling climax, lower half = big holders selling.</td><td>unknown this run</td><td><span class="warn">⚠</span></td></tr>
+      <tr><td>SMH</td><td>stale</td><td>Follow-through day</td><td>+1.5% or more on higher volume than the prior day; confirms a bottom.</td><td>needs about 509.26+ close on volume above 7.18M; unknown</td><td><span class="warn">⚠</span></td></tr>
+      <tr><td>SMH</td><td>stale</td><td>521 (200-day); bull zone 521-537</td><td>A close above it after Nvidia adds 2 sh (5 of 5).</td><td>was 4.5% below; blocked until after Nvidia</td><td><span class="warn">⚠</span></td></tr>
+      <tr><td>SPTE</td><td>44.27 (Thu close)</td><td>44.2 add; STOP close below 40.9</td><td>A close above 44.2 with SMH above 494 adds 28 sh.</td><td>0.2% above at Thu close; today unknown</td><td><span class="warn">⚠</span> plan conflict</td></tr>
+      <tr><td>PHYS</td><td>29.29 (Thu close)</td><td>31.8 / 33.9 adds; STOP close below 28.9</td><td>31.8 adds 12 sh; 33.9 adds 24 sh.</td><td>1.3% above the stop; 8.6% below 31.8</td><td><span class="warn">⚠</span></td></tr>
+      <tr><td>PSLV</td><td>16.17 (03:01 ET)</td><td>18.8 add; 200-day; STOP close below 15.5</td><td>18.8 adds 14 sh; the 200-day reclaim adds 15 sh.</td><td>4.3% above the stop; 16% below 18.8</td><td><span class="ok">✓</span></td></tr>
     </tbody>
   </table></div>
+
   <h3>Action to consider</h3>
   <ul>
-    <li>No action now. Overnight prints are bias, not signal. Do not chase the gap or react to the fade before PPI.</li>
-    <li>SMH T1b: rule "close above 494 (T1b LOC trigger)". The decision stays at about 15:40 ET / 23:40 EAT today, from where SMH actually trades. A buy LOC fills at the close whenever the close is at or below your limit; it does NOT check that the close is above 494. "Half size into binaries" applies (PPI today, Nvidia Tue).</li>
-    <li>PHYS: rule "close below 28.9 (STOP)" is 1.3% away; your GTC stop can fill intraday on a gold dip.</li>
+    <li>No new buy today. SMH is at 3 of 5, the half-size cap below the 200-day; the next SMH buy (2 sh LOC above 521) is blocked until after Nvidia reports Tue Nov 17.</li>
+    <li>Do not chase the post-PPI pop and do not sell into intraday weakness: the plan exits on the 474 close STOP (or your 482.99 GTC stop), nothing else.</li>
+    <li>SPTE: if it holds above 44.2 near 15:40 ET / 23:40 EAT with SMH above 494, the rule says buy 28 SPTE LOC (28 of 56). Before that, decide the conflict: cancel the two resting limits (14 @ 42.90, 14 @ 42.30) or accept full size. A buy LOC fills at the close whenever the close is at or below its limit; it does NOT check that the close is above 44.2.</li>
+    <li>Because IBKR is offline here, check in TWS: SPTE buy limits (last seen REPLACED), SPTE sell stops with no SPTE held, and the SMH 520.95 sell limit.</li>
   </ul>
+
   <h3>Risk</h3>
   <ul>
-    <li>Open risk to stops about 0.7% of the account vs the 9% cap <span class="ok">✓</span> IBKR</li>
-    <li>Unrealized P&amp;L on open positions about -0.2% of the account; far inside the -10% / -15% circuit breakers <span class="ok">✓</span></li>
+    <li>Last known open risk to stops about 0.7% of the account vs the 9% cap; SMH + SPTE well under the 55% cap; no drawdown limit near. Not re-checked this run. <span class="warn">⚠</span></li>
   </ul>
-  <h3>Odds (judgment estimates)</h3>
+
+  <h3>Odds (judgment estimates, unchanged: no live data)</h3>
   <div class="tablewrap"><table>
     <thead><tr><th>Horizon</th><th>Outcome</th><th>Odds</th><th>Change</th></tr></thead>
     <tbody>
-      <tr><td>Fri Nov 13 close</td><td>SMH above 494</td><td>65%</td><td>-7</td></tr>
-      <tr><td>Fri Nov 13 close</td><td>SMH 474-494</td><td>30%</td><td>+6</td></tr>
-      <tr><td>Fri Nov 13 close</td><td>SMH below 474 (STOP)</td><td>5%</td><td>+1</td></tr>
-      <tr><td>1 month</td><td>Reach 521-540</td><td>30%</td><td>-2</td></tr>
-      <tr><td>1 month</td><td>Base 470-520</td><td>43%</td><td>+1</td></tr>
-      <tr><td>1 month</td><td>Retest 445-465</td><td>18%</td><td>+1</td></tr>
+      <tr><td>Fri Nov 13 close</td><td>SMH above 494</td><td>65%</td><td>0</td></tr>
+      <tr><td>Fri Nov 13 close</td><td>SMH 474-494</td><td>30%</td><td>0</td></tr>
+      <tr><td>Fri Nov 13 close</td><td>SMH below 474 (STOP)</td><td>5%</td><td>0</td></tr>
+      <tr><td>1 month</td><td>Reach 521-540</td><td>30%</td><td>0</td></tr>
+      <tr><td>1 month</td><td>Base 470-520</td><td>43%</td><td>0</td></tr>
+      <tr><td>1 month</td><td>Retest 445-465</td><td>18%</td><td>0</td></tr>
       <tr><td>1 month</td><td>Below 445</td><td>9%</td><td>0</td></tr>
     </tbody>
   </table></div>
+
   <h3>Analyst actions</h3>
   <div class="tablewrap"><table>
     <thead><tr><th>Time ET/EAT</th><th>Ticker</th><th>Firm</th><th>Action</th><th>Previous</th><th>New</th><th>Flag</th></tr></thead>
     <tbody>
-      <tr><td>Since 21:01 ET / 05:01 EAT</td><td>AMAT, CSCO, CBRS</td><td>n/a</td><td>No dated post-earnings target changes verified yet; expect them before the open</td><td>n/a</td><td>n/a</td><td><span class="warn">⚠</span></td></tr>
+      <tr><td>03:01-09:40 ET / 11:01-17:40 EAT</td><td>NVDA, AMAT, CSCO, CBRS</td><td>n/a</td><td>No dated target or rating changes verified in sources read</td><td>n/a</td><td>n/a</td><td><span class="warn">⚠</span></td></tr>
     </tbody>
   </table></div>
+
   <h3>Next binaries</h3>
   <ul>
-    <li>Fri Nov 13: PPI 08:30 ET / 16:30 EAT; open 09:30 ET / 17:30 EAT; T1b / follow-through decision near 15:40 ET / 23:40 EAT</li>
+    <li>Fri Nov 13: SPTE add decision near 15:40 ET / 23:40 EAT; close 16:00 ET / 00:00 EAT</li>
     <li>Mon Nov 16: last follow-through window day; no adds from about 16:20 ET / 00:20 EAT Tue</li>
     <li>Tue Nov 17: retail sales 08:30 ET / 16:30 EAT; NVIDIA about 16:20 ET / 00:20 EAT Wed</li>
     <li>Wed Nov 18: FOMC minutes 14:00 ET / 22:00 EAT; Tue Dec 9 FOMC; Thu Dec 10 CPI</li>
   </ul>
+
   <h3>Run notes</h3>
   <ul>
-    <li><span class="warn">⚠</span> Project docs (growth-playbook.md, smh-watch-state.md) are not reachable from this cloud run, so the state doc was not updated; this page is the running record.</li>
+    <li><span class="warn">⚠</span> IBKR connector failed to connect (502) on both attempts: prices shown are the last known values from the 03:01 ET run or Thursday closes.</li>
+    <li><span class="warn">⚠</span> Project docs (growth-playbook.md, smh-watch-state.md) not reachable from this cloud run; the state doc was not updated. This page is the running record.</li>
   </ul>
 </article>
